@@ -1,10 +1,5 @@
 let link = document.getElementById('test');
 
-// link.addEventListener('click', (event) => {
-//     console.log('testezin')
-//     event.preventDefault();
-//     window.location('../img/publish3.png');
-// });
 
 function download_file(fileURL, fileName) {
     // for non-IE
@@ -37,4 +32,8 @@ function download_file(fileURL, fileName) {
     }
 }
 
-download_file('../img/publish3.png', 'some_name');
+
+link.addEventListener('click', (event) => {
+    event.preventDefault();
+    download_file('../img/publish3.png', 'some_name');
+});
