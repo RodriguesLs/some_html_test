@@ -57,3 +57,9 @@ if (hasGetUserMedia()) {
 } else {
     alert('getUserMedia() is not supported in your browser');
 }
+
+let print = document.getElementById('print')
+print.addEventListener('click', e => {
+    e.preventDefault();
+    window.print();
+})
