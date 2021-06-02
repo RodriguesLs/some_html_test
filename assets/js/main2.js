@@ -32,7 +32,6 @@ function download_file(fileURL, fileName) {
     }
 }
 
-
 link.addEventListener('click', (event) => {
     event.preventDefault();
     download_file('../img/publish3.png', 'some_name');
