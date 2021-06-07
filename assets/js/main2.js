@@ -45,6 +45,13 @@ return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
 if (hasGetUserMedia()) {
     // Good to go!
 
+    navigator.getUserMedia = (
+        navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia
+    )
+
     navigator.getUserMedia({audio:true}, 
         function(stream) {
             alert('we can access mic');
@@ -67,7 +74,8 @@ let btn_full = document.getElementById('btn_fullscreen')
 let btn_exit_full = document.getElementById('btn_exit_fullscreen')
 
 btn_full.addEventListener('click', () => {
-    let div = document.getElementById('id_div_fullscreen')
+    alert('here');
+    let div = document.getElementById('id_div_fullscreen');
     div.requestFullscreen();
     div.style.backgroundColor = 'white';
     btn_full.style.display = 'none';
