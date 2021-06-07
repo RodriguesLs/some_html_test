@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='../css/main.css'>
+</head>
+<body>
+  <div class='considerer'>
+      <h3> Itens considerados nesse teste: </h3>
+      <ul>
+          <li>Download</li>
+          <li>Iframe com javascript</li>
+          <li>Impressão</li>
+          <li>Fullscreen</li>
+          <li>Microfone</li>
+          <li>Pdf em nova aba</li>
+      </ul>
+  </div>
+  <div>
+    <h3>Teste fullscreen</h3>
+    <div class='fullscreen'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_NvZRo-3wvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id='id_div_fullscreen' class='div_fullscreen'>
+          <p>Some text... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi laboriosam ab ipsam et obcaecati animi illum provident veritatis aspernatur! Sint tempore quam optio impedit similique harum commodi quibusdam repellat saepe!</p>
+          <button id='btn_fullscreen'>Click to fullscreen mode</button>
+          <button id='btn_exit_fullscreen' style='display: none;'>Click to exit fullscreen mode</button>
+        </div>  
+    </div>
+  </div>
+
+  <div class='div_print'>
+    <h3>Teste de impressão</h3>
+
+    <button id='print'>Click me to print screen</button>
+  </div>
+
+  <div class='div_downloads'>
+    <h3>Teste de downloads</h3>
+
+    <a id="test" href="../img/publish3.png" download>Download image directly [png]</a><br />
+    <a href="../zip/Upload-flow-ionica.pdf.zip">Download zip without 'download' attribute [ZIP]</a><br />
+    <a href="../pdf/Upload-flow-ionica.pdf" download="new_file">Download file with another name [pdf]</a><br />
+  </div>
+
+  <div class='internal_iframes'>
+    <h3>Iframe without sandbox</h3>
+    <iframe src='iframe.html' allow="camera;microphone"></iframe>
+    <br />
+    <h3>Iframe with sandbox and allow-popups</h3>
+    <iframe src='iframe.html' sandbox="allow-popups"></iframe>
+    <br />
+    <h3>Iframe with sandbox and allow-popups && allow-popups-to-escape-sandbox</h3>
+    <iframe src='iframe.html' sandbox="allow-popups allow-popups-to-escape-sandbox"></iframe>
+  </div>
+
+  <div class='out_sandbox'>
+    <h3>Teste abrir página fora do sandbox</h3><br />
+    <a href="../html/iframe.html" target="_blank">CLICK TO OPEN OUT OF SANDBOX</a>
+  </div>
+
+  <div class="open-pdf">
+    <h3>Teste abrir pdf em nova aba</h3><br />
+    <a href="../pdf/Upload-flow-ionica.pdf" target="_blank">[pdf] Open pdf</a><br />
+  </div>
+</body>
+<script src='../js/main2.js'></script>
+</html>

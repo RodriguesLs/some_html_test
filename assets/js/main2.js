@@ -1,6 +1,5 @@
 let link = document.getElementById('test');
 
-
 function download_file(fileURL, fileName) {
     // for non-IE
     if (!window.ActiveXObject) {
@@ -63,3 +62,20 @@ print.addEventListener('click', e => {
     e.preventDefault();
     window.print();
 })
+
+let btn_full = document.getElementById('btn_fullscreen')
+let btn_exit_full = document.getElementById('btn_exit_fullscreen')
+
+btn_full.addEventListener('click', () => {
+    let div = document.getElementById('id_div_fullscreen')
+    div.requestFullscreen();
+    div.style.backgroundColor = 'white';
+    btn_full.style.display = 'none';
+    btn_exit_full.style.display = 'block';
+});
+
+btn_exit_full.addEventListener('click', () => {
+    document.exitFullscreen();
+    btn_full.style.display = 'block';
+    btn_exit_full.style.display = 'none';
+});

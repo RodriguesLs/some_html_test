@@ -1,0 +1,66 @@
+body, html, h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  height: 3em;
+  padding-top: .2em;
+  background-color: aqua;
+  text-align: center;
+}
+
+.considerer {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.fullscreen {
+  margin-top: 15px;
+  border: 1px solid blue;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  background-color: burlywood;
+}
+
+.div_fullscreen {
+  height: 20em;
+  width: 20em;
+  border: 1px solid blueviolet;
+  background-color: white;
+}
+
+.div_print {
+  border: 1px solid red;
+  padding: 1em;
+  margin-top: 1em;
+  background-color: coral;
+}
+
+.div_downloads {
+  border: 1px solid black;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.internal_iframes {
+  border: 1px solid blue;
+  margin-top: 1em;
+  padding: 1em;
+  color: red;
+  background-color: burlywood;
+}
+
+.out_sandbox {
+  border: 1px solid red;
+  padding: 1em;
+  margin-top: 1em;
+  background-color: coral;
+}
+
+.open-pdf {
+  border: 1px solid black;
+  padding: 1em;
+  margin-top: 1em;
+}
